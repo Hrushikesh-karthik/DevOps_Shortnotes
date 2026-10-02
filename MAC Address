@@ -1,0 +1,12 @@
+It is hardware address of a Network card
+eg: 52:54:00:ab:12:34
+ip link show eth0
+it shows the MAC address
+
+ARP is used to map IP address to MAC
+question: broadcast
+answer: unicast
+
+ip neigh - This command prints the ARP table
+ping -c 2 <gateway-ip>: asks who is the original source
+Clear and rebuild the ARP table - ip neigh flush all && ip neigh
