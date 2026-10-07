@@ -11,7 +11,8 @@ cat /etc/hostname          # the machine's name, as stored on disk
 cat /etc/os-release        # which Linux distribution and version
 
 Multiple tasks at once using && operator:
-echo "Linux">kernel.txt && cat kernel.txt && ls / >root-listing.txt && cat root-listing.txt
+
+mkdir deploy && cd deploy && mkdir dev && cd dev && echo "dev">settings.txt && cd .. && mkdir staging && cd staging && echo "staging">settings.txt && cd .. && mkdir prod && cd prod && echo "prod">settings.txt && cd ../.. && echo "DONE"
 
 uname -s prints the kernel name. Every Linux machine, no matter which distribution, reports "Linux". Darwin is what macOS reports. Windows and BSD are their own kernels entirely. When you're troubleshooting a script that needs to know which system it's running on, uname is the standard way to ask.
 
