@@ -3,3 +3,6 @@ mkdir /root/projects            # create at an absolute path
 
 Plain mkdir fails if the parent folder doesn't already exist. mkdir -p creates every missing parent along the way:
 mkdir -p /root/projects/api/src
+
+whoami -> root : Username
+hostname -> Desktop1 : machine name
