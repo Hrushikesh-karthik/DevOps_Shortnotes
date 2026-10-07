@@ -1,0 +1,8 @@
+ls -a        # include hidden entries
+
+Dotfiles hold configuration. 
+
+.bashrc - shell startup config
+.ssh/ - SSH keys and known hosts
+.aws/, .kube/ - cloud and cluster credentials
+.gitignore, .env - project-level config
