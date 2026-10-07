@@ -14,3 +14,21 @@ Multiple tasks at once using && operator:
 echo "Linux">kernel.txt && cat kernel.txt && ls / >root-listing.txt && cat root-listing.txt
 
 uname -s prints the kernel name. Every Linux machine, no matter which distribution, reports "Linux". Darwin is what macOS reports. Windows and BSD are their own kernels entirely. When you're troubleshooting a script that needs to know which system it's running on, uname is the standard way to ask.
+
+You've just logged in to a server you have never used before — a real one that other people depend on. Nothing is broken right now. What's your first command?
+Ans: Two commands, two seconds, and you've ruled out the whole "wait, I was on the wrong box" category of mistakes. Senior engineers do this reflexively.
+
+These are the most common folders that you would see directly under /. Each one has a specific job.
+
+/etc holds system-wide configuration.
+/var holds data that changes while the system runs, like logs, mail queues, and package caches. The one you'll open most is /var/log, which is where every service writes its log files.
+/home holds one folder per regular user account. A user named alice gets /home/alice as her home folder, and she typically owns everything inside it.
+/root is the home folder of the root (administrator) user. It's kept separate from /home so the root account can still work even if /home is on a broken disk.
+/tmp is scratch space. Any process can write files here, and the contents are typically wiped on reboot. Never store anything you want to keep.
+/usr holds installed software: user programs in /usr/bin, libraries in /usr/lib, documentation in /usr/share. Package managers put most of their files here.
+/bin holds essential command binaries needed early during boot and system recovery, like ls, cp, and bash. On modern Linux it's usually a symlink to /usr/bin.
+
+An absolute path starts with / and describes the full route from the top of the tree down to the file. For the file above, that is:
+/etc/nginx/nginx.conf
+
+A relative path doesn't start with /. It's read starting from wherever you're currently standing.
