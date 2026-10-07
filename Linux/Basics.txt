@@ -6,3 +6,9 @@ mkdir -p /root/projects/api/src
 
 whoami -> root : Username
 hostname -> Desktop1 : machine name
+
+cat /etc/hostname          # the machine's name, as stored on disk
+cat /etc/os-release        # which Linux distribution and version
+
+Multiple tasks at once using && operator:
+echo "Linux">kernel.txt && cat kernel.txt && ls / >root-listing.txt && cat root-listing.txt
