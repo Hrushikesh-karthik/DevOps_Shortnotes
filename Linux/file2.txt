@@ -10,3 +10,5 @@ Dotfiles hold configuration.
 That's long listing, all files (hidden included), human-readable sizes : ls -lah ~
 
 ls -a | wc -l : It counts the words given by ls
+
+ls -a ~ | grep '^\.'      # only entries starting with a dot (dotfiles)
