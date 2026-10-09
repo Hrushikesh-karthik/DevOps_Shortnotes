@@ -7,4 +7,6 @@ Dotfiles hold configuration.
 .aws/, .kube/ - cloud and cluster credentials
 .gitignore, .env - project-level config
 
-That's long listing, all files (hidden included), human-readable sizes. Type it now against your home folder: ls -lah ~
+That's long listing, all files (hidden included), human-readable sizes : ls -lah ~
+
+ls -a | wc -l : It counts the words given by ls
