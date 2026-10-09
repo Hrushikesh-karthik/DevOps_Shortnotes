@@ -10,7 +10,6 @@ Dotfiles hold configuration.
 That's long listing, all files (hidden included), human-readable sizes : ls -lah ~
 
 ls -a | wc -l : It counts the words given by ls
-wc -l /etc/passwd also can be used
 
 ls -a ~ | grep '^\.'      # only entries starting with a dot (dotfiles)
 
@@ -21,3 +20,6 @@ ls -h
 
 You want to list files in /var/log sorted by size, but you don't remember which flag ls uses for that. What do you do?
 Run `ls` with the `--help` flag and skim the output (or pipe it through `grep` to filter) for the flag you want.
+
+wc -l /etc/passwd         # also can be used
+ls /etc | wc -l           # how many entries live in /etc
