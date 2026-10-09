@@ -17,3 +17,6 @@ Help commands:
 ls --help
 man ls
 ls -h
+
+You want to list files in /var/log sorted by size, but you don't remember which flag ls uses for that. What do you do?
+Run `ls` with the `--help` flag and skim the output (or pipe it through `grep` to filter) for the flag you want.
